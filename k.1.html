@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<style>
+		
+		#box{
+			width:300px;
+			height:300px;
+			background-color: grey;
+			
+		}
+		h3{
+		    	font-size:24px;
+			color:white;
+			text-align: center;
+			padding-top: 125px;	
+		}
+
+	</style>
+</head>
+<BODY id="myBody">
+<div id="box">
+	<h3>JS Tutorial</h3>
+</div>
+<hr size="3px solid white">
+<button onclick="alert()">Alert Inline</button>
+<button onclick="confirm()">confirm Inline</button>
+<button onclick="prompt()">prompt Inline</button>
+
+<hr size="3px solid white">
+
+<button onclick="alertfunc()">Alert function</button>
+<button onclick="confirmfunc()">confirm function</button>
+<button onclick="promptfunc()">prompt function</button>
+
+<hr size="3px solid white">
+
+<button  onclick="bbc()">Body bg green</button>
+<button onclick="dbc()">Div bg grey</button>
+
+<hr size="3px solid white">
+
+<button  onclick="bbg()">Body bg color</button>
+<button onclick="dbg()">Div bg color</button>
+
+<hr size="3px solid white">
+
+<input id="first" onchange="input1()" type="color">
+<input id="second" onchange="input2()" type="color">
+
+
+
+<SCRIPT>
+function alertfunc(){
+  alert("Function alert");
+}
+function confirmfunc(){
+  confirm();
+}
+function promptfunc(){
+  prompt();
+}
+function bbc(){
+  document.getElementById("myBody").style.background="blue";  
+}
+function dbc(){
+  document.getElementById("box").style.background="brown";  
+}
+function bbg(){
+  let color = prompt("Enter the color : ");
+  document.getElementById("myBody").style.background = color;
+}
+function dbg(){
+  let color = prompt("Enter the color for div  : ");
+  document.getElementById("box").style.background = color;
+}
+
+function input1()
+{
+	 document.body.style.backgroundColor = document.getElementById("first").value;
+}
+function input2(){
+	 document.getElementById("box").style.backgroundColor = document.getElementById("second").value;
+}
+	
+			
+
+</SCRIPT>
+</BODY>
+</HTML>  
